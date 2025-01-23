@@ -18,6 +18,7 @@ use App\Http\Controllers\ParkingController;
 Route::get('/houses', [ParkingController::class, 'getHouses']);
 Route::get('/free-parking', [ParkingController::class, 'getFreeParkingSpots']);
 Route::post('/book-parking', [ParkingController::class, 'bookParkingSpot']);
+Route::get('/rooms', [ParkingController::class, 'getRooms']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
